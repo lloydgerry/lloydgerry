@@ -1,16 +1,116 @@
 ---
+import Base from '../layouts/Base.astro';
+import Timeline from '../components/Timeline.jsx';
+import { chapters, tracks } from '../data/experience';
+
+const email = 'hello@lloydgerry.com';
+const linkedin = 'https://www.linkedin.com/in/lloyd-gerry';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base
+  title="Lloyd Gerry"
+  description="Lloyd Gerry — software engineer and manager in Victoria, BC. Sales, operations, business school, photography, and a decade of software."
+>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="name" href="/">Lloyd Gerry</a>
+    <nav aria-label="Sections">
+      <a href="#story">Story</a>
+      <a href="#path">Path</a>
+      <a href="#now">Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="kicker">Victoria, BC</p>
+      <h1>Hi, I’m Lloyd.</h1>
+      <p class="lede">
+        I’ve sold things, run operations floors, studied business, owned a photography
+        company, and spent the last decade building software and leading the people
+        who build it. This is the long version.
+      </p>
+      <span class="ph portrait">portrait.jpg</span>
+    </section>
+
+    <section id="story" class="story" aria-labelledby="story-h">
+      <h2 id="story-h" class="label">Story</h2>
+      <div class="prose">
+        <p>
+          I’ve been technical since I was six — building computers and websites long
+          before either was a job. But my working life started with people, not code.
+        </p>
+        <p>
+          I started in technical support at 20. Six promotions later, at 21, I was an
+          operations supervisor running 120 direct reports and six managers.
+          <span class="ph">sales chapter — what you sold, where, and what it taught you</span>
+        </p>
+        <p>
+          I studied finance at <span class="ph">business school</span>, which is still
+          why I make the case for engineering work in cost and risk rather than
+          elegance. For eight years I ran my own photography company — and it’s still
+          how I think about craft: get the light right and you need far less fixing
+          afterwards.
+        </p>
+        <p>
+          Then five years at Amazon: tier 2 support, leading on the customer success
+          team, running the coaching program, and training trainers abroad. The
+          engineering career started in the same building, on BookFinder.com and
+          AbeBooks.com — and it has run through government, fintech, and most recently
+          a maritime intelligence platform, first as a senior engineer and then as the
+          team’s manager.
+        </p>
+        <p>
+          Most engineering managers are engineers who pick up the people work late. I did
+          it in the other order. <span class="ph">a line or two on what you care about outside work</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="path" aria-labelledby="path-h">
+      <h2 id="path-h" class="label">Path</h2>
+      <Timeline client:visible chapters={chapters} tracks={tracks} />
+    </section>
+
+    <section id="now" class="now" aria-labelledby="now-h">
+      <h2 id="now-h" class="label">Now</h2>
+      <div class="cards">
+        <article class="card">
+          <p class="card-k"><span class="dot" aria-hidden="true"></span>Open to work</p>
+          <h3>Senior developer or development manager</h3>
+          <p>
+            Full-time, in Victoria or remote. A team that ships to real customers, where
+            I can either build on AWS or lead the people doing it.
+          </p>
+          <p><a href={`mailto:${email}`}>Get in touch →</a> <span class="ph">CV PDF</span></p>
+        </article>
+        <article class="card">
+          <p class="card-k">Also</p>
+          <h3>Fractional engineering leadership</h3>
+          <p>
+            Part-time engineering management for teams of five to fifteen who need the
+            role covered before they can justify it full time.
+          </p>
+          <p><a href="https://fractionalleader.co">fractionalleader.co →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h" class="label">Contact</h2>
+      <p class="big">Say hello.</p>
+      <p><a class="mail" href={`mailto:${email}`}>{email}</a></p>
+      <p class="muted">
+        <a href={linkedin} rel="me">LinkedIn ↗</a> · Pacific time
+      </p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© {new Date().getFullYear()} Lloyd Gerry</span>
+    <a href={linkedin} rel="me">LinkedIn</a>
+    <a href={`mailto:${email}`}>Email</a>
+  </footer>
+</Base>

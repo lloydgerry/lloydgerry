@@ -51,7 +51,7 @@ export default function Timeline({ chapters, tracks }) {
                   <span className="org"> · <Text>{c.org}</Text></span>
                 </h3>
                 <p className="context"><Text>{c.context}</Text></p>
-                <p><Text>{c.summary}</Text></p>
+                {c.summary && <p><Text>{c.summary}</Text></p>}
                 {c.highlights.length > 0 && (
                   <ul>
                     {c.highlights.map((h) => (

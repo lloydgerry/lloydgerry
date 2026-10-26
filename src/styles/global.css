@@ -14,6 +14,7 @@
   --software: #2f6f73;
   --leadership: #b4532a;
   --business: #7a5a12;
+  --service: #8a2f4a;
   --ph-bg: #fff1a8;
   --ph-ink: #5a4a00;
 
@@ -38,6 +39,7 @@
     --software: #6fb7bb;
     --leadership: #e08a5f;
     --business: #d4b25a;
+    --service: #e0849f;
     --ph-bg: #4a3f00;
     --ph-ink: #fff1a8;
     color-scheme: dark;
@@ -54,6 +56,7 @@
   --software: #6fb7bb;
   --leadership: #e08a5f;
   --business: #d4b25a;
+  --service: #e0849f;
   --ph-bg: #4a3f00;
   --ph-ink: #fff1a8;
   color-scheme: dark;
@@ -194,3 +197,4 @@ main > section:first-child { border-top: 0; }
   border-top: 1px solid var(--rule);
 }
 .foot a { color: var(--muted); }
+.track-service { color: var(--service); }

@@ -220,11 +220,11 @@ export const chapters: Chapter[] = [
   {
     org: '[[company]]',
     context: 'Operations',
-    title: 'Technical Support → Operations Supervisor',
+    title: 'Technical Support → Team Lead → Operations Supervisor',
     period: '[[dates]]',
     tracks: ['leadership'],
     summary:
-      'Started in technical support at 20; six promotions later, at 21, I was running 120 direct reports and six managers.',
+      'Started in technical support at 20. Six promotions later — through team lead — I was operations supervisor at 21, running 120 direct reports and six managers.',
     highlights: [],
     stack: [],
   },

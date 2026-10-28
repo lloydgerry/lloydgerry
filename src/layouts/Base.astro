@@ -9,8 +9,8 @@ interface Props {
 const { title, description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 
-// REMOVE AT LAUNCH. Keeps search engines out while [[placeholder]] copy is visible.
-const noindex = true;
+// Set true to keep search engines out (e.g. while unfinished copy is visible).
+const noindex = false;
 ---
 
 <!doctype html>

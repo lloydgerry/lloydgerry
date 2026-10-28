@@ -218,7 +218,7 @@ export const chapters: Chapter[] = [
     stack: [],
   },
   {
-    org: '[[company]]',
+    org: 'West Corporation',
     context: 'Operations',
     title: 'Technical Support → Team Lead → Operations Supervisor',
     period: '[[dates]]',

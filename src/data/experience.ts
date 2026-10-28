@@ -221,7 +221,7 @@ export const chapters: Chapter[] = [
     org: 'West Corporation',
     context: 'Operations',
     title: 'Technical Support → Team Lead → Operations Supervisor',
-    period: '[[dates]]',
+    period: '2004 – 2007',
     tracks: ['leadership'],
     summary:
       'Started in technical support at 20. Six promotions later — through team lead — I was operations supervisor at 21, running 120 direct reports and six managers.',

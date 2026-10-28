@@ -196,6 +196,17 @@ export const chapters: Chapter[] = [
     stack: [],
   },
   {
+    org: 'Future Shop',
+    context: 'Consumer electronics retail',
+    title: 'Sales → Floor Manager',
+    period: '2007 – 2010',
+    tracks: ['business', 'leadership'],
+    summary:
+      'Sold on the floor, and stepped up as floor manager at times — running the shift and the team on it.',
+    highlights: [],
+    stack: [],
+  },
+  {
     org: 'Camosun College',
     context: 'Business school',
     title: 'Diploma, Business — Finance',
@@ -203,16 +214,6 @@ export const chapters: Chapter[] = [
     tracks: ['business'],
     summary:
       'Why I still argue for engineering work in the language of cost and risk rather than elegance.',
-    highlights: [],
-    stack: [],
-  },
-  {
-    org: '[[company]]',
-    context: '[[industry]]',
-    title: '[[sales role]]',
-    period: '[[dates]]',
-    tracks: ['business', 'leadership'],
-    summary: '[[what you sold, to whom, and the results]]',
     highlights: [],
     stack: [],
   },

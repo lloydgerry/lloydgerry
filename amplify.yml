@@ -3,9 +3,10 @@
 # Astro builds to static files in dist/. Node comes from .nvmrc so the build
 # matches local development.
 #
-# As with the fractional site: if Amplify stores this spec on the app at creation,
-# later edits to customHeaders here are not read. Sync them with
-# `aws amplify update-app --custom-headers` and redeploy.
+# The customHeaders block below is NOT read from this file — Amplify only applies
+# headers stored on the app. After editing it, strip comments, sync with
+# `aws amplify update-app --app-id d1klsc9hunmcvk --custom-headers file://...`,
+# and redeploy. (Same gotcha as the fractional site; see its README.)
 
 version: 1
 

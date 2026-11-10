@@ -115,7 +115,10 @@ const linkedin = 'https://www.linkedin.com/in/lloyd-gerry';
     <section id="contact" class="contact" aria-labelledby="contact-h">
       <h2 id="contact-h" class="label">Contact</h2>
       <p class="big">Say hello.</p>
-      <p><a class="mail" href={`mailto:${email}`}>{email}</a></p>
+      <p>
+        <a class="mail" href={`mailto:${email}`}>{email}</a>
+        <button class="copy" type="button" data-copy={email} hidden>Copy</button>
+      </p>
       <p class="muted">
         <a href={linkedin} rel="me">LinkedIn ↗</a> · <a href="/Lloyd-Gerry-Resume.pdf">Resume (PDF)</a> · Pacific time
       </p>
@@ -128,3 +131,21 @@ const linkedin = 'https://www.linkedin.com/in/lloyd-gerry';
     <a href={`mailto:${email}`}>Email</a>
   </footer>
 </Base>
+
+<script>
+  // Fallback for visitors without a mail app: copy the address instead.
+  // Hidden where the Clipboard API is unavailable.
+  if (navigator.clipboard && window.isSecureContext) {
+    document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+      const label = btn.textContent;
+      btn.hidden = false;
+      btn.addEventListener('click', () => {
+        navigator.clipboard.writeText(btn.dataset.copy!).then(
+          () => { btn.textContent = 'Copied'; },
+          () => { btn.textContent = 'Copy failed'; },
+        );
+        setTimeout(() => { btn.textContent = label; }, 2000);
+      });
+    });
+  }
+</script>

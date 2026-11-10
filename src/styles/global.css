@@ -194,6 +194,12 @@ main > section:first-child { border-top: 0; }
 
 .big { font: 500 clamp(1.75rem, 5vw, 2.75rem)/1.15 var(--serif); margin: 0 0 1rem; }
 .mail { font: 1.2rem var(--mono); }
+.copy {
+  font: 0.8rem var(--mono); color: var(--muted); background: transparent;
+  border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.8rem;
+  margin-left: 0.6rem; cursor: pointer; vertical-align: middle;
+}
+.copy:hover { color: var(--accent); border-color: var(--accent); }
 
 .foot {
   max-width: var(--wide); margin: 0 auto; padding: 2rem 1rem 3rem;

@@ -113,7 +113,7 @@ export const chapters: Chapter[] = [
     period: 'Nov 2020 – present',
     tracks: ['service', 'leadership'],
     summary:
-      'Coxswain — vessel commander — for a 24/7 volunteer marine rescue service working alongside the Canadian Coast Guard. I lead crews on search-and-rescue missions and train them in seamanship, rescue operations, and safety.',
+      'Coxswain — captain — for a 24/7 volunteer marine rescue service working alongside the Canadian Coast Guard. I lead crews on search-and-rescue missions and train them in seamanship, rescue operations, and safety.',
     highlights: [],
     stack: [],
   },

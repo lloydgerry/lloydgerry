@@ -33,7 +33,7 @@ export const chapters: Chapter[] = [
     period: 'Dec 2024 – Oct 2026',
     tracks: ['leadership', 'software'],
     summary:
-      'Sole engineering manager for the ten-person engineering org, then led a team of up to eight as it grew to sixteen — with zero turnover and several promotions.',
+      'Managed up to ten engineers on the application side, then led a team of up to eight as the wider engineering team grew to sixteen — with zero turnover and several promotions.',
     highlights: [
       'Owned the OCIANA application and its internal tooling end to end, setting architecture and building several tools myself',
       'Significantly cut build and release times through CI/CD, build, and monitoring work',
